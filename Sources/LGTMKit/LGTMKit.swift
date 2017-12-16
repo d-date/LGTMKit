@@ -36,6 +36,6 @@ public struct LGTMKit {
     }
 
     public static func asMarkdown(imageUrl: URL) -> String {
-        return "<p align='center><img src='\(imageUrl.absoluteString)' alt='LGTM' /></p>"
+        return "<p align='center'><img src='\(imageUrl.absoluteString)' alt='LGTM' /></p>"
     }
 }
