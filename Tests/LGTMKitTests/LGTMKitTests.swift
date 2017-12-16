@@ -35,7 +35,8 @@ class LGTMKitTests: XCTestCase {
 
     static var allTests = [
         ("testFetchLGTM", testFetchLGTM),
-        ("testFetchLGTMHTTPSOnly", testFetchLGTMHTTPSOnly)
+        ("testFetchLGTMHTTPSOnly", testFetchLGTMHTTPSOnly),
+        ("testMarkdown", testMarkdown)
     ]
 
 }
