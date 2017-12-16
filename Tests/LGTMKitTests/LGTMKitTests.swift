@@ -22,10 +22,21 @@ class LGTMKitTests: XCTestCase {
         }
         waitForExpectations(timeout: 10.0)
     }
+    
+    func testMarkdown() {
+        guard let url = URL(string: "https://test.lgtmkit.com") else {
+            fatalError("Should check URL format")
+        }
+        
+        let markdown = LGTMKit.asMarkdown(imageUrl: url)
+        XCTAssert(markdown.contains("img"), "Necessary img tag")
+        XCTAssert(markdown.contains("align='center'"), "Changed alignment?")
+    }
 
     static var allTests = [
         ("testFetchLGTM", testFetchLGTM),
-        ("testFetchLGTMHTTPSOnly", testFetchLGTMHTTPSOnly)
+        ("testFetchLGTMHTTPSOnly", testFetchLGTMHTTPSOnly),
+        ("testMarkdown", testMarkdown)
     ]
 
 }
